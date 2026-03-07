@@ -7,8 +7,8 @@ const IMGS = {
   feat:  "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=1000&q=80", // turmeric roots & powder
   b1:    "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700&q=80",  // spice farm
   b2:    "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=700&q=80",  // red chilli pile
-  b3:    "https://images.unsplash.com/photo-1612257416648-a6d8ed764c6e?w=700&q=80",  // garam masala blend
-  b4:    "https://images.unsplash.com/photo-1599909533731-d3b3a85f47ba?w=700&q=80",  // spice packaging quality
+  b3:    "https://images.openai.com/static-rsc-3/y77qZ90qReWKfAHjyIPp_v8NZGFVUwJ2O48OHIqlPs9Xli-xN9p1HR7DFVeH0qk-eGxy-hpNoINfdxlG5IQUkIcmHtrGgQpLXu9x967oZqI?purpose=inline",  // garam masala blend
+  b4:    "https://images.openai.com/static-rsc-3/aOHQ8QN7-QLDia6y03luqwhxu2b4FR4asOPaR6n20aBwDov-SfxVU3Po4VWQeOxmmlD14vNixl8O5drhExC_6Br-UwnBHEtcKgtDG6E6oe0?purpose=inline",  // spice packaging quality
   b5:    "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=700&q=80",  // mortar pestle ayurveda
   b6:    "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=700&q=80",  // spice jars storage
 };
