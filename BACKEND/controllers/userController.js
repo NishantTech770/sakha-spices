@@ -97,26 +97,3 @@ exports.login = async (req, res) => {
 
 
 
-exports.getAllUsers = async (req, res) => {
-  try {
-    // Exclude password field from response
-    const allUsers = await User.find({}).select("-password");
-
-    if (!allUsers) {
-      return res.status(status.NOT_FOUND).json({
-        message: "No users found!",
-      });
-    }
-
-    return res.status(status.OK).json({
-      success: true,
-      message: "Users fetched successfully!",
-      allUsers,
-    });
-  } catch (err) {
-    return res.status(status.INTERNAL_SERVER_ERROR).json({
-      message: "Internal server error!",
-    });
-  }
-};
-

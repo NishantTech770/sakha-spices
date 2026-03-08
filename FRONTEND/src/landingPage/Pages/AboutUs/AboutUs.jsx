@@ -1,21 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./about.css";
 
-/* ── Images from Unsplash ── */
 const IMGS = {
-  heroBg:    "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=80",
-  story:     "https://images.unsplash.com/photo-1506368083636-6defb67639a7?w=900&q=85",
-  storyRnd:  "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80",
-  brand1:    "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
-  brand2:    "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=800&q=80",
+  heroBg:
+    "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=80",
+  story:
+    "https://images.unsplash.com/photo-1506368083636-6defb67639a7?w=900&q=85",
+  storyRnd:
+    "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&q=80",
+  brand1:
+    "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=800&q=80",
+  brand2:
+    "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=800&q=80",
 };
 
-/* ── Data ── */
 const STATS = [
-  { num: "2021",  label: "Year Established" },
-  { num: "50+",   label: "Team Members" },
-  { num: "2",     label: "Premium Brands" },
-  { num: "100%",  label: "Pure & Natural" },
+  { num: "2021", label: "Year Established" },
+  { num: "50+", label: "Team Members" },
+  { num: "2", label: "Premium Brands" },
+  { num: "100%", label: "Pure & Natural" },
 ];
 
 const VALUES = [
@@ -79,40 +82,38 @@ const TIMELINE = [
   },
 ];
 
-/* ════════════════════════════════════════════
-   Component
-════════════════════════════════════════════ */
 const AboutUs = () => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
-  const SakhaProducts = () =>  {
-    navigate("/products/sakha")
-  }
+  const SakhaProducts = () => {
+    navigate("/products/sakha");
+  };
 
-  const ShrinathProducts = () =>  {
-    navigate("/products/shrinath-ji")
-  }
+  const ShrinathProducts = () => {
+    navigate("/products/shrinath-ji");
+  };
   return (
     <div className="about-page page-content">
-
-      {/* ── 1. HERO ── */}
       <section className="about-hero">
         <img src={IMGS.heroBg} alt="Spices" className="about-hero__bg" />
         <div className="about-hero__overlay" />
         <div className="about-hero__stripe" />
         <div className="about-hero__content">
-          <p className="about-hero__eyebrow">✦ Est. 2021 &nbsp;•&nbsp; Shyam Sakha Industries Pvt. Ltd.</p>
+          <p className="about-hero__eyebrow">
+            ✦ Est. 2021 &nbsp;•&nbsp; Shyam Sakha Industries Pvt. Ltd.
+          </p>
           <h1 className="about-hero__title">
-            Our Story of<br /><em>Pure Spice</em>
+            Our Story of
+            <br />
+            <em>Pure Spice</em>
           </h1>
           <p className="about-hero__sub">
-            A fast-growing manufacturer rooted in quality, hygiene and the timeless
-            tradition of Indian spices.
+            A fast-growing manufacturer rooted in quality, hygiene and the
+            timeless tradition of Indian spices.
           </p>
         </div>
       </section>
 
-      {/* ── 2. STATS BAR ── */}
       <div className="about-stats">
         <div className="about-stats__inner">
           {STATS.map((s, i) => (
@@ -124,67 +125,89 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* ── 3. STORY ── */}
       <section className="about-story">
         <div className="about-story__inner">
-
-          {/* Image */}
           <div className="about-story__img-wrap">
             <div className="about-story__rotating">
               <svg viewBox="0 0 100 100" width="100" height="100">
                 <defs>
-                  <path id="circ" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                  <path
+                    id="circ"
+                    d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                  />
                 </defs>
-                <text fontSize="10" fontFamily="Jost, sans-serif" fontWeight="600"
-                  letterSpacing="3.2" fill="#C8410B">
-                  <textPath href="#circ">PURE · AUTHENTIC · TRUSTED ·&nbsp;</textPath>
+                <text
+                  fontSize="10"
+                  fontFamily="Jost, sans-serif"
+                  fontWeight="600"
+                  letterSpacing="3.2"
+                  fill="#C8410B"
+                >
+                  <textPath href="#circ">
+                    PURE · AUTHENTIC · TRUSTED ·&nbsp;
+                  </textPath>
                 </text>
               </svg>
             </div>
-            <img src={IMGS.story} alt="Our spice facility" className="about-story__img-main" />
-            <img src={IMGS.storyRnd} alt="Spice detail" className="about-story__img-pill" />
+            <img
+              src={IMGS.story}
+              alt="Our spice facility"
+              className="about-story__img-main"
+            />
+            <img
+              src={IMGS.storyRnd}
+              alt="Spice detail"
+              className="about-story__img-pill"
+            />
           </div>
 
-          {/* Text */}
           <div className="about-story__content">
             <div className="about-label">Who We Are</div>
             <h2 className="about-story__title">
-              Crafting Spices with<br />
+              Crafting Spices with
+              <br />
               <span>Passion & Purpose</span>
             </h2>
             <p className="about-story__text">
-              <strong>Shyam Sakha Industries Pvt. Ltd.</strong> is a fast-growing and trusted
-              manufacturer of premium whole spices and garam masala products. Established in
-              <strong> 2021</strong>, we set out with a single-minded focus on purity,
-              hygiene and consistency.
+              <strong>Shyam Sakha Industries Pvt. Ltd.</strong> is a
+              fast-growing and trusted manufacturer of premium whole spices and
+              garam masala products. Established in
+              <strong> 2021</strong>, we set out with a single-minded focus on
+              purity, hygiene and consistency.
             </p>
             <p className="about-story__text">
-              We work directly with farmers and use modern cleaning, drying, grading and
-              packaging machinery that preserves the natural aroma and quality that Indian
-              kitchens deserve. Every spice we produce is a promise — of authenticity,
-              of care, of flavour that honours tradition.
+              We work directly with farmers and use modern cleaning, drying,
+              grading and packaging machinery that preserves the natural aroma
+              and quality that Indian kitchens deserve. Every spice we produce
+              is a promise — of authenticity, of care, of flavour that honours
+              tradition.
             </p>
             <p className="about-story__text">
-              Backed by strict quality checks and export-ready standards, our products are
-              proudly marketed under two beloved brands — <strong>Sakha</strong> and
+              Backed by strict quality checks and export-ready standards, our
+              products are proudly marketed under two beloved brands —{" "}
+              <strong>Sakha</strong> and
               <strong> Shrinath Ji</strong>.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── 4. VALUES ── */}
       <section className="about-values">
         <div className="about-values__inner">
           <div className="about-values__header">
-            <div className="about-label" style={{ color: "var(--gold-lt)", justifyContent: "center" }}>
+            <div
+              className="about-label"
+              style={{ color: "var(--gold-lt)", justifyContent: "center" }}
+            >
               What Drives Us
             </div>
             <h2 className="about-values__title">
-              Built on <em>Principles</em>,<br />Delivered with Pride
+              Built on <em>Principles</em>,<br />
+              Delivered with Pride
             </h2>
             <p className="about-values__sub">
-              Six pillars that define every decision we make — from sourcing to packaging.
+              Six pillars that define every decision we make — from sourcing to
+              packaging.
             </p>
           </div>
 
@@ -200,11 +223,12 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ── 5. TIMELINE ── */}
       <section className="about-journey">
         <div className="about-journey__inner">
           <div className="about-journey__header">
-            <div className="about-label" style={{ justifyContent: "center" }}>Our Journey</div>
+            <div className="about-label" style={{ justifyContent: "center" }}>
+              Our Journey
+            </div>
             <h2 className="about-journey__title">
               Growing, <em>Year by Year</em>
             </h2>
@@ -223,41 +247,48 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ── 6. BRANDS ── */}
       <section className="about-brands">
         <div className="about-brands__inner">
           <div className="about-brands__header">
-            <div className="about-label" style={{ justifyContent: "center" }}>Our Brands</div>
+            <div className="about-label" style={{ justifyContent: "center" }}>
+              Our Brands
+            </div>
             <h2 className="about-brands__title">
               Two Names, <em>One Standard</em>
             </h2>
           </div>
 
           <div className="about-brands__grid">
-            {/* Sakha */}
             <div className="brand-card" onClick={SakhaProducts}>
-              <img src={IMGS.brand1} alt="Sakha Brand" className="brand-card__bg" />
+              <img
+                src={IMGS.brand1}
+                alt="Sakha Brand"
+                className="brand-card__bg"
+              />
               <div className="brand-card__overlay" />
               <div className="brand-card__content">
                 <span className="brand-card__tag">Everyday Essentials</span>
                 <div className="brand-card__name">Sakha</div>
                 <p className="brand-card__desc">
-                  Premium whole spices and powders for the everyday Indian kitchen.
-                  Sourced pure, packed fresh, trusted daily.
+                  Premium whole spices and powders for the everyday Indian
+                  kitchen. Sourced pure, packed fresh, trusted daily.
                 </p>
               </div>
             </div>
 
-            {/* Shrinath Ji */}
             <div className="brand-card" onClick={ShrinathProducts}>
-              <img src={IMGS.brand2} alt="Shrinath Ji Brand" className="brand-card__bg" />
+              <img
+                src={IMGS.brand2}
+                alt="Shrinath Ji Brand"
+                className="brand-card__bg"
+              />
               <div className="brand-card__overlay" />
               <div className="brand-card__content">
                 <span className="brand-card__tag">Traditional Blends</span>
                 <div className="brand-card__name">Shrinath Ji</div>
                 <p className="brand-card__desc">
-                  Sacred garam masala blends crafted from age-old Rajasthani recipes.
-                  A tribute to tradition in every pinch.
+                  Sacred garam masala blends crafted from age-old Rajasthani
+                  recipes. A tribute to tradition in every pinch.
                 </p>
               </div>
             </div>
@@ -265,9 +296,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ── 7. CTA ── */}
       <section className="about-cta">
-        <div className="about-label" style={{ color: "var(--gold-lt)", justifyContent: "center" }}>
+        <div
+          className="about-label"
+          style={{ color: "var(--gold-lt)", justifyContent: "center" }}
+        >
           Let's Connect
         </div>
         <h2 className="about-cta__title">
@@ -278,11 +311,14 @@ const AboutUs = () => {
           tell you more about what we do and how we do it.
         </p>
         <div className="about-cta__actions">
-          <Link to="/contact-us" className="btn-primary">Get in Touch →</Link>
-          <Link to="/products/sakha" className="btn-ghost">Explore Products</Link>
+          <Link to="/contact-us" className="btn-primary">
+            Get in Touch →
+          </Link>
+          <Link to="/products/sakha" className="btn-ghost">
+            Explore Products
+          </Link>
         </div>
       </section>
-
     </div>
   );
 };

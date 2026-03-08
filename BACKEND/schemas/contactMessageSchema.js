@@ -22,7 +22,7 @@ const contactMessageSchema = new Schema(
         "Retail Enquiry",
         "Export Enquiry",
         "Product Feedback",
-        "Other"
+        "Other",
       ],
       required: true,
     },

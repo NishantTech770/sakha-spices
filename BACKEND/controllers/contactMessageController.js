@@ -32,27 +32,3 @@ exports.SendMessage = async (req, res) => {
     });
   }
 };
-
-
-
-exports.getAllMessages = async (req, res) => {
-  try {
-    let allMessages = await ContactMessage.find({});
-
-    if (!allMessages) {
-      return res.status(status.NOT_FOUND).json({
-        message: "No Messages found!",
-      });
-    }
-
-    return res.status(status.OK).json({
-      success: true,
-      message: "Messages fetched successfully!",
-      allMessages,
-    });
-  } catch (err) {
-    return res.status(status.INTERNAL_SERVER_ERROR).json({
-      message: "Internal server error!",
-    });
-  }
-};

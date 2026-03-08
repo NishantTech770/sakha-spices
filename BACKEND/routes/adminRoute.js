@@ -1,8 +1,14 @@
-const express = require("express")
-const router = express.Router()
-const { getAllUsers } = require("../controllers/userController")
-const { isAdmin } = require("../middlewares/roleMiddleware")
+const express = require("express");
+const router = express.Router();
+const {
+  getAllUsers,
+  getAllMessages,
+} = require("../controllers/adminController");
 
-router.get("/allusers",  getAllUsers)
+const { isAdmin } = require("../middlewares/roleMiddleware");
+const { protect } = require("../middlewares/authMiddleware");
 
-module.exports = router
+router.get("/users", protect, isAdmin, getAllUsers);
+router.get("/messages", protect, isAdmin, getAllMessages);
+
+module.exports = router;

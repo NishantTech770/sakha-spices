@@ -1,17 +1,29 @@
-import AppRoutes from "./routes/AppRoutes"
+import { useLocation } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 import Navbar from "./landingPage/Components/Navbar";
-import Footer from "./landingPage/Components/Footer"
+import Footer from "./landingPage/Components/Footer";
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
+  const location = useLocation();
+
+  const isAdmin = location.pathname.startsWith("/admin");
+
   return (
-     <div className="app">
+    <div className="app">
       <ScrollToTop />
       <Navbar />
-      <main className="main-content">
+
+      {isAdmin ? (
         <AppRoutes />
-      </main>
-      <Footer />
+      ) : (
+        <>
+          <main className="main-content">
+            <AppRoutes />
+          </main>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
