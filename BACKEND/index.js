@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://sakha-spices.vercel.app"],
+    origin: ["https://sakha-spices.vercel.app"],
   }),
 );
 
@@ -16,7 +16,7 @@ const { connectToDB } = require("./Config/db");
 
 connectToDB();
 
-const userRoute = require("./Routes/userRoute");
+const userRoute = require("./routes/userRoute");
 const contactMessageRoute = require("./routes/contactMessageRoute");
 const adminRoute = require("./routes/adminRoute");
 
@@ -24,6 +24,8 @@ app.use("/api", userRoute);
 app.use("/api/message", contactMessageRoute);
 app.use("/api/admin", adminRoute);
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on Port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is listening on Port ${PORT}`);
+// });
+
+module.exports = app
