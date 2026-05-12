@@ -133,7 +133,7 @@ function ContactUs() {
     if (!validate()) return;
     setLoading(true);
     try {
-      const res = await axios.post("https://sakha-spices-backend.vercel.app/api/message/send", {
+      const res = await axios.post("http://localhost:8080/api/message/send", {
         name: form.name.trim(),
         email: form.email.trim(),
         phone: form.phone.trim(),

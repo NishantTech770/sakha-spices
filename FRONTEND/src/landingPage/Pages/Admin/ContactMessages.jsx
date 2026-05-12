@@ -3,7 +3,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import "./admin.css";
 
-const BASE = "https://sakha-spices-backend.vercel.app/api/admin";
+const BASE = "http://localhost:8080/api/admin";
 
 const getToken = () => localStorage.getItem("token") || "";
 const authHeaders = () => ({

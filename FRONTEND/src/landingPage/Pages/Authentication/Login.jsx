@@ -30,7 +30,7 @@ const Login = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "https://sakha-spices-backend.vercel.app/api/login",
+        "http://localhost:8080/api/login",
         form,
       );
 

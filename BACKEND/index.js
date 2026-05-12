@@ -1,4 +1,5 @@
-require("dotenv").config();
+const dotenv = require("dotenv");
+dotenv.config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -8,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://sakha-spices.vercel.app"],
+    origin: ["http://localhost:5173"],
   }),
 );
 
 const { connectToDB } = require("./Config/db");
-
+console.log("MONGO_URI:", process.env.MONGO_URI);
 connectToDB();
 
 const userRoute = require("./routes/userRoute");
@@ -24,8 +25,8 @@ app.use("/api", userRoute);
 app.use("/api/message", contactMessageRoute);
 app.use("/api/admin", adminRoute);
 
-// app.listen(PORT, () => {
-//   console.log(`Server is listening on Port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server is listening on Port ${PORT}`);
+});
 
 module.exports = app
