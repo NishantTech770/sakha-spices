@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://sakha-spices-peach.vercel.app/"],
+    origin: ["https://sakha-spices-peach.vercel.app"],
   }),
 );
 
