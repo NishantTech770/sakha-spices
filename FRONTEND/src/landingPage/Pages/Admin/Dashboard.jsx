@@ -4,7 +4,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import "./admin.css";
 
-const BASE = "http://localhost:8080/api";
+const BASE = "https://sakha-spices-2.onrender.com/api";
 
 const getToken = () => localStorage.getItem("token") || "";
 const authHeaders = () => ({

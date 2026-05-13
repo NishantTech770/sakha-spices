@@ -25,7 +25,7 @@ const Signup = () => {
     setError("");
     setLoading(true);
     try {
-      await axios.post("http://localhost:8080/api/signup", {
+      await axios.post("https://sakha-spices-2.onrender.com/api/signup", {
         ...form,
         phone: Number(form.phone),
       });
